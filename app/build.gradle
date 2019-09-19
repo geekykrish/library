@@ -1,0 +1,15 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
+    core()
+    ui()
+    di()
+    monitoring()
+    lifecycle()
+    coroutines()
+    navigation()
+    barcode()
+    network()
+    api deps.gson
+}

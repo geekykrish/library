@@ -1,0 +1,90 @@
+def Group(Closure closure) {
+    closure.delegate = dependencies
+    return closure
+}
+
+ext {
+    core = Group {
+        api deps.google.androidx.appcompat
+        api deps.google.androidx.core
+        api deps.google.androidx.support
+        api deps.google.androidx.legecy
+        api deps.kotlin.core
+        api deps.gson
+    }
+    lifecycle = Group {
+        api deps.google.androidx.lifecycle
+        api deps.google.androidx.livedatalifecycle
+        api deps.google.androidx.viewmodellifecycle
+    }
+    di = Group {
+        api deps.koin.core
+        api deps.koin.viewmodel
+    }
+    coroutines = Group {
+        api deps.coroutines.coroutines
+        api deps.coroutines.coroutinescore
+    }
+    navigation = Group {
+        api deps.navigation.fragment
+        api deps.navigation.ui
+    }
+    ui = Group {
+        api deps.google.androidx.recyclerview
+        api deps.google.androidx.design
+        api deps.google.androidx.constraintLayout
+    }
+    barcode = Group {
+        api deps.barcode.android
+        api deps.barcode.core
+    }
+    monitoring = Group {
+        api deps.google.firebase.core
+        api deps.google.firebase.messaging
+        api deps.google.firebase.auth
+        api (deps.google.firebase.crashlytics) { transitive = true }
+    }
+    network = Group {
+        api deps.retrofit.core
+        api deps.retrofit.gson
+    }
+    debug = Group {
+        debugImplementation deps.leakCanary
+        releaseImplementation deps.leakCanaryNoOp
+        testImplementation deps.leakCanaryNoOp
+    }
+    test = Group {
+        testImplementation deps.junit
+        testImplementation deps.google.espresso.supportContrib
+        testImplementation deps.google.espresso.core
+        testImplementation deps.google.testSupport.core
+        testImplementation deps.google.testSupport.archCore
+        testImplementation deps.kotlin.couroutines
+    }
+    robolectric = Group {
+        testImplementation deps.robolectric
+    }
+    mockk = Group {
+        testImplementation deps.mock.mockk
+    }
+    fragmentTest = Group {
+        api (deps.fragment.testing){
+            exclude group: 'androidx.test', module: 'core'
+        }
+        api deps.fragment.core
+    }
+    instrumentation = Group {
+        androidTestImplementation deps.google.testSupport.runner
+        androidTestImplementation deps.google.espresso.core
+        androidTestImplementation deps.google.espresso.contrib
+        androidTestImplementation deps.google.androidx.testRules
+        androidTestImplementation deps.google.androidx.junit
+        androidTestImplementation deps.koin.koinTest
+        androidTestImplementation deps.okhttp.mockWebServer
+        api deps.google.testSupport.core
+        kaptAndroidTest deps.google.androidx.databinding
+        androidTestImplementation (deps.mock.mockkAndroid){
+            exclude module: 'objenesis'
+        }
+    }
+}

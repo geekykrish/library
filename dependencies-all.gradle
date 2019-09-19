@@ -1,0 +1,76 @@
+ext.deps = [
+        'kotlin': [
+            'core':"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.kotlin",
+            'couroutines':"org.jetbrains.kotlinx:kotlinx-coroutines-test:$versions.couroutines"
+        ],
+        'coroutines': [
+                    'coroutines':"org.jetbrains.kotlinx:kotlinx-coroutines-android:$versions.coroutines",
+                    'coroutinescore': "org.jetbrains.kotlinx:kotlinx-coroutines-core:$versions.coroutines"
+        ],
+        'navigation': [
+            'fragment': "android.arch.navigation:navigation-fragment-ktx:$versions.navigation",
+            'ui': "android.arch.navigation:navigation-ui-ktx:$versions.navigation"
+        ],
+        'google': [
+                'androidx': [
+                        'appcompat': "androidx.appcompat:appcompat:$versions.androidx.compat",
+                        'databinding': "androidx.databinding:databinding-compiler:$versions.androidx.databinding",
+                        'core': "androidx.core:core-ktx:$versions.androidx.core",
+                        'recyclerview': "androidx.recyclerview:recyclerview:$versions.androidx.recyclerview",
+                        'design': "com.google.android.material:material:$versions.material",
+                        'constraintLayout': "androidx.constraintlayout:constraintlayout:$versions.constraint_layout",
+                        'support': "com.android.support:support-compat:$versions.androidx.support",
+                        'lifecycle': "androidx.lifecycle:lifecycle-extensions:$versions.androidx.lifecycle",
+                        'livedatalifecycle': "androidx.lifecycle:lifecycle-livedata-ktx:$versions.androidx.livedatalifecycle",
+                        'viewmodellifecycle':"androidx.lifecycle:lifecycle-viewmodel-ktx:$versions.androidx.livedatalifecycle",
+                        'legecy': "androidx.legacy:legacy-support-v4:$versions.androidx.legecy",
+                        'junit': "androidx.test.ext:junit:$versions.androidx.junit",
+                        'testRules': "androidx.test:rules:$versions.androidx.testRule"
+                ],
+                'firebase': [
+                        'core': "com.google.firebase:firebase-core:$versions.firebase.core",
+                        'messaging':"com.google.firebase:firebase-messaging:$versions.firebase.messaging",
+                        'auth': "com.google.firebase:firebase-auth:$versions.firebase.auth",
+                        'crashlytics': "com.crashlytics.sdk.android:crashlytics:$versions.crashlytics@aar"
+                ],
+                'testSupport': [
+                        'runner': "androidx.test:runner:$versions.support_runner",
+                        'archCore': "androidx.arch.core:core-testing:$versions.androidx.testCore",
+                        'core': "androidx.test:core:$versions.testSupportCore"
+                ],
+                'espresso': [
+                        'core': "androidx.test.espresso:espresso-core:$versions.espresso",
+                        'contrib': "androidx.test.espresso:espresso-contrib:$versions.espresso",
+                        'supportContrib': "com.android.support.test.espresso:espresso-contrib:$versions.espresso"
+                ],
+        ],
+        'koin': [
+                'core': "org.koin:koin-android:$versions.koin",
+                'koinTest': "org.koin:koin-test:$versions.koin",
+                'viewmodel': "org.koin:koin-android-viewmodel:$versions.koin"
+        ],
+        'okhttp': [
+                'mockWebServer': "com.squareup.okhttp3:mockwebserver:$versions.okhttp.core"
+        ],
+        'retrofit': [
+                'core': "com.squareup.retrofit2:retrofit:$versions.retrofit.core",
+                'gson': "com.squareup.retrofit2:converter-gson:$versions.retrofit.gsonConverter"
+        ],
+        'barcode': [
+                'core': "com.google.zxing:android-core:$versions.barcode.core",
+                'android': "com.google.zxing:core:$versions.barcode.android"
+        ],
+        'gson': "com.google.code.gson:gson:$versions.gson",
+        'leakCanary': "com.squareup.leakcanary:leakcanary-android:$versions.leak_canary",
+        'leakCanaryNoOp': "com.squareup.leakcanary:leakcanary-android-no-op:$versions.leak_canary",
+        'junit': "junit:junit:$versions.junit",
+        'robolectric': "org.robolectric:robolectric:$versions.robolectric",
+        'mock': [
+            'mockk': "io.mockk:mockk:$versions.mock.mockk",
+            'mockkAndroid': "io.mockk:mockk-android:$versions.mock.mockk"
+        ],
+        'fragment': [
+            'testing': "androidx.fragment:fragment-testing:$versions.fragmentTesting",
+            'core': "androidx.fragment:fragment:$versions.fragmentTesting"
+        ]
+]
